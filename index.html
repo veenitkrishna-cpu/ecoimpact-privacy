@@ -28,6 +28,9 @@
       --warning-border: #fef08a;
       --warning-bg: #fefce8;
       --warning-text: #854d0e;
+      --info-border: #bae6fd;
+      --info-bg: #f0f9ff;
+      --info-text: #0369a1;
       --code-bg: #f1f5f9;
       --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
@@ -87,7 +90,8 @@
 
     .policy-meta {
       font-size: 0.875rem;
-      opacity: 0.85;
+      opacity: 0.9;
+      line-height: 1.5;
     }
 
     .container {
@@ -137,7 +141,7 @@
       border: 1px solid #a7f3d0;
       border-radius: 8px;
       padding: 1.25rem 1.5rem;
-      margin-bottom: 2rem;
+      margin: 1.75rem 0;
     }
 
     .toc h3 {
@@ -178,7 +182,7 @@
     h2 {
       font-size: 1.5rem;
       color: #111827;
-      margin-top: 2rem;
+      margin-top: 2.25rem;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--border-color);
@@ -203,7 +207,7 @@
     h3 {
       font-size: 1.15rem;
       color: #1f2937;
-      margin-top: 1.25rem;
+      margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
@@ -247,6 +251,12 @@
     }
 
     .callout-info {
+      background-color: var(--info-bg);
+      border: 1px solid var(--info-border);
+      color: var(--info-text);
+    }
+
+    .callout-primary {
       background-color: var(--primary-light);
       border: 1px solid #a7f3d0;
       color: #065f46;
@@ -367,7 +377,7 @@
       <p class="policy-subtitle">Transparent, offline-first personal carbon and habit tracking.</p>
       <div class="policy-meta">
         <strong>Effective Date:</strong> October 28, 2026 &bull; 
-        <strong>App Version:</strong> 2.1 &bull; 
+        <strong>Release Scope:</strong> Shipped Release v1.0.0 &amp; Target v2.1 Architecture &bull; 
         <strong>Package:</strong> <code>com.ecoimpact.app</code>
       </div>
     </div>
@@ -384,22 +394,32 @@
           We believe personal environmental action should never require invasive personal surveillance.
         </p>
 
+        <!-- Scope & Version Notice -->
+        <div class="callout callout-info">
+          <strong>Release Version &amp; Deployment Scope Notice:</strong>
+          This document accurately reflects our current privacy practices while transparently distinguishing between:
+          <ul style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
+            <li><strong>Currently Shipped Release (v1.0.0):</strong> The build currently distributed as a signed release bundle. It operates primarily as an offline-first tool using device-generated identifiers and baseline cloud synchronization.</li>
+            <li><strong>Upcoming Target Release (v2.1 Architecture):</strong> Introduces anonymous Supabase authentication, anti-cheat scoring validations, cryptographic deletion tokens, and strict database Row-Level Security. These enhanced protections apply only after the v2.1 client update and corresponding cloud migrations are deployed and operational in hosted infrastructure.</li>
+          </ul>
+        </div>
+
         <div class="highlights-grid">
           <div class="highlight-item">
             <h4>No Advertising or Trackers</h4>
-            <p>Zero third-party advertisement SDKs, trackers, or commercial profiling networks.</p>
+            <p>Zero third-party advertisement SDKs, commercial trackers, or profiling networks.</p>
           </div>
           <div class="highlight-item">
             <h4>No Location Permissions</h4>
-            <p>GPS and network location permissions are never requested. City input is strictly optional user text.</p>
+            <p>GPS and network location permissions are never requested. Locality text is purely optional user input.</p>
           </div>
           <div class="highlight-item">
-            <h4>Anonymous Authentication</h4>
-            <p>No email, password, phone number, or social login required to sync or participate.</p>
+            <h4>Anonymous Architecture</h4>
+            <p>No email, password, phone number, or social media login required to track personal habits.</p>
           </div>
           <div class="highlight-item">
-            <h4>Self-Service Data Deletion</h4>
-            <p>Permanent in-app deletion button wipes both local device data and remote cloud records.</p>
+            <h4>Data Deletion Options</h4>
+            <p>In-app tool to reset local data and request cloud profile removal; enhanced server deletion is planned for v2.1.</p>
           </div>
         </div>
 
@@ -411,10 +431,10 @@
             <li><a href="#section-3">How We Use Your Information</a></li>
             <li><a href="#section-4">Data Storage &amp; Infrastructure</a></li>
             <li><a href="#section-5">Community Leaderboard &amp; Privacy</a></li>
-            <li><a href="#section-6">Data Retention &amp; Inactivity Purge</a></li>
-            <li><a href="#section-7">Account &amp; Data Deletion</a></li>
-            <li><a href="#section-8">Security Safeguards &amp; Architecture</a></li>
-            <li><a href="#section-9">Your Legal Rights</a></li>
+            <li><a href="#section-6">Data Retention Policy &amp; Implementation Status</a></li>
+            <li><a href="#section-7">Account &amp; Data Deletion Instructions</a></li>
+            <li><a href="#section-8">Security Safeguards &amp; Architecture: Current vs. Target</a></li>
+            <li><a href="#section-9">Your Legal Rights &amp; Limitations</a></li>
             <li><a href="#section-10">Children's Privacy</a></li>
             <li><a href="#section-11">Changes to This Policy</a></li>
             <li><a href="#section-12">Contact &amp; Support</a></li>
@@ -425,21 +445,21 @@
       <!-- Section 1 -->
       <section id="section-1">
         <h2><span class="section-num">1</span> Information We Collect</h2>
-        <p>EcoImpact minimizes data collection to only what is strictly necessary to calculate habit points, calculate cumulative CO₂ metrics, and facilitate optional community leaderboard rankings.</p>
+        <p>EcoImpact minimizes data collection to only what is strictly necessary to calculate habit points, calculate cumulative CO₂ metrics, and facilitate community leaderboard rankings.</p>
 
         <h3>A. Information You Provide Directly</h3>
         <ul>
-          <li><strong>Display Name:</strong> A nickname or alias you choose for yourself in your profile (e.g., &ldquo;EcoAdventurer&rdquo;). This name is visible to others only if you opt in to leaderboard sharing.</li>
+          <li><strong>Display Name:</strong> A nickname or alias you choose for yourself in your profile (e.g., &ldquo;EcoAdventurer&rdquo;). This name is visible on the community leaderboard unless you choose to opt out of leaderboard sharing.</li>
           <li><strong>City &amp; Country:</strong> Manually entered text describing your general locality (defaulting to &ldquo;Local&rdquo;). <em>This is purely free-form text entered by you; we never access device GPS or location hardware.</em></li>
           <li><strong>Habit Completions:</strong> Specific eco-friendly actions you log in the app (e.g., reusable water bottle, cold-water laundry, plant-based meal, public transit commute), along with the date and time of completion.</li>
           <li><strong>Preferences:</strong> Your selected unit system (Metric: km/kg vs. Imperial: mi/lbs), theme mode (System/Light/Dark), notification reminder preferences, and leaderboard visibility toggle.</li>
         </ul>
 
-        <h3>B. Automatically Generated Identifiers</h3>
+        <h3>B. Device &amp; System Identifiers</h3>
         <ul>
           <li><strong>Device Identifier (UUID):</strong> A randomly generated Version-4 UUID created locally on your device when the app is first installed (stored in private app DataStore). It is not linked to your device hardware, IMEI, MAC address, or Android Advertising ID.</li>
-          <li><strong>Cryptographic Deletion Token:</strong> A 256-bit cryptographically secure random token (64-character hexadecimal string) generated locally on your device. The raw token remains on your device; only a one-way cryptographic SHA-256 hash of this token is transmitted to the server upon initial registration to verify and authorize future account deletion requests without requiring passwords.</li>
-          <li><strong>Anonymous Authentication Session:</strong> When online synchronization is active, an anonymous account session identifier is provisioned via Supabase Auth (<code>signInAnonymously()</code>). This provides cryptographic session tokens (JWT) to enforce database Row-Level Security (RLS) without requiring your name, email, or credentials.</li>
+          <li><strong>Cryptographic Deletion Token (Planned v2.1 Architecture):</strong> In the local v2.1 codebase, a 256-bit cryptographically secure random token (64-character hexadecimal string) is generated locally on your device. The raw token remains on your device; only a one-way cryptographic SHA-256 hash of this token is transmitted to the server upon initial registration to verify and authorize future account deletion requests without requiring passwords. <em>Note:</em> The currently shipped v1.0.0 release does not generate or transmit cryptographic deletion tokens.</li>
+          <li><strong>Anonymous Authentication Session (Planned v2.1 Architecture):</strong> When online synchronization is active in the upcoming v2.1 build, an anonymous account session identifier is provisioned via Supabase Auth (<code>signInAnonymously()</code>). This provides cryptographic session tokens (JWT) to enforce database Row-Level Security (RLS) without requiring your name, email, or credentials. In the currently shipped v1.0.0 release, requests connect without an active Supabase Auth session token.</li>
         </ul>
       </section>
 
@@ -505,7 +525,7 @@
           <li><strong>Impact Calculation &amp; Scoring:</strong> To calculate your estimated carbon emissions avoided (kg CO₂) and points earned based on published scientific emission factors.</li>
           <li><strong>Offline-First Persistence:</strong> To keep your activity history, streaks, and unlocked milestone badges accessible on your device even without an internet connection.</li>
           <li><strong>Cloud Synchronization (When Connected):</strong> To back up your habit logs and total score so your progress is preserved across app sessions.</li>
-          <li><strong>Community Leaderboard:</strong> If and only if opted in, to display your display name, city, and points on the community cohort leaderboard.</li>
+          <li><strong>Community Leaderboard:</strong> To display your display name, city, and points on the community cohort leaderboard (enabled by default; you can opt out at any time in Privacy Settings).</li>
           <li><strong>Local Habit Reminders:</strong> If enabled, the app uses Android's local <code>AlarmManager</code> / notification scheduler to deliver periodic nudges to log your habits. These notifications are scheduled 100% locally on your device without push notification servers.</li>
         </ul>
       </section>
@@ -516,14 +536,14 @@
         
         <h3>Local On-Device Storage</h3>
         <p>
-          EcoImpact operates with an <strong>offline-first architecture</strong>. Your profile details, habit completion logs, points ledger, and unlocked badges are stored in an encrypted/sandboxed SQLite database on your device using Android Room (<code>EcoImpactDatabase</code>). Device credentials and deletion tokens are stored in Android Jetpack DataStore Preferences in private app-specific storage inaccessible to other installed applications.
+          EcoImpact operates with an <strong>offline-first architecture</strong>. Your profile details, habit completion logs, points ledger, and unlocked badges are stored locally on your device in a private SQLite database managed by Android Room (<code>EcoImpactDatabase</code>). This database resides in your device's internal app-specific private directory and is protected by the Android application sandbox (isolated Linux UID) and device-level operating system encryption where supported by your device hardware. EcoImpact does not install custom database-level encryption (such as SQLCipher). Device credentials and deletion tokens are stored in Android Jetpack DataStore Preferences in private, app-specific storage inaccessible to other installed applications.
         </p>
 
         <h3>Cloud Storage &amp; Service Providers</h3>
         <p>When you have an active internet connection, EcoImpact connects to cloud infrastructure provided by:</p>
         <ul>
           <li>
-            <strong>Supabase Inc.</strong> — Provides our managed PostgreSQL database, authentication service, and serverless Edge Functions. Cloud infrastructure is hosted in enterprise-grade AWS data centers located in the European Union (Frankfurt, Germany) with end-to-end TLS 1.3 encryption in transit and AES-256 encryption at rest.
+            <strong>Supabase Inc.</strong> — Provides managed PostgreSQL cloud database, authentication, and serverless Edge Function infrastructure. Network communications between the Android application and Supabase endpoints occur over encrypted HTTPS connections using industry-standard Transport Layer Security (TLS 1.2 or TLS 1.3, depending on client device operating system and network negotiation). Cloud infrastructure is hosted through Supabase's managed platform.
           </li>
         </ul>
         <p>We do not use any other cloud providers, data brokers, or third-party storage vendors.</p>
@@ -532,27 +552,32 @@
       <!-- Section 5 -->
       <section id="section-5">
         <h2><span class="section-num">5</span> Community Leaderboard &amp; Privacy</h2>
-        <p>EcoImpact includes an optional community leaderboard displaying user rankings, tiers, and points.</p>
+        <p>EcoImpact includes a community leaderboard displaying user rankings, tiers, and points.</p>
         <ul>
-          <li><strong>Opt-In by Default with Full Control:</strong> You can toggle leaderboard participation on or off at any time in the <strong>Profile &gt; Privacy Settings</strong> menu.</li>
-          <li><strong>Masked Identifiers:</strong> The leaderboard view (<code>public.leaderboard_view</code>) never exposes your underlying device UUID or internal account IDs. User identifiers are irreversibly hashed using SHA-256 before being displayed in leaderboard queries.</li>
-          <li><strong>Immediate Opt-Out Effect:</strong> If you toggle leaderboard sharing off, your profile is immediately filtered out of all community leaderboard queries.</li>
+          <li><strong>Leaderboard Settings &amp; Default Behavior:</strong> In the application's profile data model, leaderboard participation defaults to enabled upon initial profile setup (<code>privacyShareInLeaderboard = true</code>). You can turn leaderboard sharing off at any time in the app's <strong>Profile &gt; Settings</strong> menu.</li>
+          <li><strong>Opt-Out Design vs. Hosted Verification:</strong> The app is designed to stop sharing your profile through its leaderboard experience when this setting is disabled. However, the exact effect on hosted leaderboard data depends on the deployed backend configuration, which has not yet been fully verified in the deployed environment for the target v2.1 release.</li>
+          <li><strong>Masked Identifiers (Planned v2.1 Architecture):</strong> In the baseline database schema definition (<code>schema.sql</code>), the leaderboard view references underlying account UUIDs directly. The planned v2.1 migration changes the view to mask identifiers using a SHA-256 digest. However, external Data API accessibility in the current hosted environment remains unconfirmed; the production dashboard previously reported zero exposed tables and zero exposed functions. We have not verified public reachability through an end-to-end request.</li>
         </ul>
       </section>
 
       <!-- Section 6 -->
       <section id="section-6">
-        <h2><span class="section-num">6</span> Data Retention &amp; 12-Month Inactivity Purge</h2>
+        <h2><span class="section-num">6</span> Data Retention Policy &amp; Implementation Status</h2>
         
-        <p>We believe data should not be kept longer than necessary. Our retention policy is enforced both logically and through server-side automation:</p>
+        <p>We believe user data should not be retained longer than necessary. Our retention objectives and current operational status are outlined below:</p>
 
         <h3>A. Active Accounts</h3>
-        <p>Your habit logs and score are retained as long as you actively use the application. Every time you open the app, sync habits, or update your profile, your activity timestamp (<code>last_synced_at</code>) is refreshed.</p>
+        <p>Your habit logs and score are retained as long as you actively use the application. In both the current and planned architecture, performing an online synchronization refreshes your activity timestamp (<code>last_synced_at</code>).</p>
 
-        <h3>B. Automated 12-Month Inactivity Purge</h3>
-        <div class="callout callout-info">
-          <strong>Verified Automated Retention Rule:</strong>
-          In accordance with database maintenance routine <code>public.purge_expired_profiles_12m()</code>, if an account has no synchronization or logging activity for <strong>12 consecutive months</strong> (and is outside any initial migration grace period), all associated cloud records—including user profile, habit logs, points ledgers, and authentication credentials—are <strong>automatically and permanently deleted</strong> from our cloud database.
+        <h3>B. Intended 12-Month Inactivity Retention Policy</h3>
+        <p>
+          EcoImpact's intended data lifecycle policy is to retain cloud records for no longer than <strong>12 consecutive months</strong> after your last recorded synchronization activity.
+        </p>
+
+        <div class="callout callout-warning">
+          <strong>Operational Implementation Notice &amp; Limitations:</strong>
+          While a database cleanup routine (<code>public.purge_expired_profiles_12m()</code>) has been authored in our local v2.1 database migration code, <strong>no automated background purge, scheduled cron job (e.g. pg_cron), or recurring manual maintenance workflow is currently active or verified in the deployed production environment</strong>.<br><br>
+          Consequently, automatic or scheduled purging of inactive cloud records after 12 months is <strong>not currently operational or guaranteed</strong>. Deploying, scheduling, and verifying an operational retention purge mechanism remains an outstanding operational requirement before this retention policy can be automatically enforced.
         </div>
       </section>
 
@@ -562,7 +587,7 @@
         <p>You have full, unhindered control over your data. We provide both an instant self-service deletion mechanism directly inside the Android application and a manual email request path.</p>
 
         <h3>Method 1: Direct In-App Deletion (Recommended)</h3>
-        <p>You can permanently delete all local and cloud data directly within the app at any time:</p>
+        <p>You can permanently delete your local data and request cloud record removal directly within the app at any time:</p>
         
         <div class="step-box">
           <div class="step-header"><span class="step-number">1</span> Open the EcoImpact App</div>
@@ -580,35 +605,45 @@
         </div>
 
         <div class="callout callout-warning">
-          <strong>Important Disclosure Regarding Pending Deletion:</strong>
-          When you confirm deletion, the app dispatches an authenticated request to our secure <code>delete-account</code> Edge Function using your device's cryptographic deletion token. The server permanently purges your cloud profile, habit history, point ledgers, and authentication account.<br><br>
-          <strong>If the device is offline or the server cannot complete the request immediately</strong> (e.g. temporary network outage), the app safely records a durable pending tombstone on your device and keeps local records intact until the cloud deletion is confirmed. As soon as network connectivity is restored, the deletion retries automatically, wipes the local database, and clears the tombstone.
+          <strong>Important Disclosure Regarding Deletion Architecture &amp; Pending Deployment:</strong>
+          <strong>Release Version Status:</strong> In the currently shipped v1.0.0 release, in-app deletion executes basic local database clearing and calls legacy database routines. The hardened deletion flow—which routes requests to a dedicated <code>delete-account</code> Supabase Edge Function to delete both database records and authentication accounts—exists only in local v2.1 code. It has NOT been deployed to or verified in hosted staging or production infrastructure. Therefore, complete end-to-end cloud account deletion cannot be guaranteed until the backend Edge Function and migrations are fully deployed, operational, and verified.<br><br>
+          <strong>Offline &amp; Retry Behavior (v2.1 Architecture):</strong> Under the v2.1 client implementation, if your device is offline or the server cannot complete the deletion request immediately (e.g., temporary network interruption or partial server response), the app records a durable pending tombstone in local preferences and preserves your local database records so no unconfirmed state is lost. As soon as network connectivity is restored and confirmed, the deletion request retries automatically, wipes the local database, and removes the tombstone.
         </div>
 
         <h3>Method 2: Manual Deletion Request via Email</h3>
         <p>
-          If you have uninstalled the application, lost your device, or are unable to use the in-app deletion button, you may submit a manual deletion request by contacting our official support email:
+          If you have uninstalled the application, lost your device, or are unable to use the in-app deletion mechanism, you may submit a manual deletion request by contacting our official support email at <a href="mailto:support.ecoimpact@gmail.com">support.ecoimpact@gmail.com</a>.
         </p>
         <p style="text-align: center; margin: 1.5rem 0;">
           <a href="mailto:support.ecoimpact@gmail.com?subject=EcoImpact%20Data%20Deletion%20Request" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
             Email support.ecoimpact@gmail.com
           </a>
         </p>
-        <p>
-          <em>Note:</em> Because EcoImpact uses anonymous device identifiers without collecting your personal email address or passwords, please mention any known details (such as your display name or approximate date of registration) when writing to us so we can locate and remove any lingering cloud records.
-        </p>
+        <div class="callout callout-warning">
+          <strong>Identity Verification for Anonymous Accounts:</strong>
+          Because EcoImpact uses anonymous device identifiers and does not collect verified email addresses, passwords, or phone numbers, display names are non-unique across the user base. To prevent accidental or malicious deletion of another user's records, manual deletion requests require sufficient corroborating information to verify account ownership (such as your device UUID if previously noted, your exact display name, city, approximate registration date, recent habit completions, or approximate points balance). If ownership cannot be reasonably verified from provided corroborating details, manual deletion cannot be executed, and the associated cloud records will remain in the database until an operational account-purging mechanism is deployed and executed.
+        </div>
       </section>
 
       <!-- Section 8 -->
       <section id="section-8">
-        <h2><span class="section-num">8</span> Security Safeguards &amp; Architecture</h2>
-        <p>EcoImpact incorporates defense-in-depth security principles across the client and cloud architecture:</p>
+        <h2><span class="section-num">8</span> Security Safeguards &amp; Architecture: Current vs. Target</h2>
+        <p>EcoImpact incorporates defense-in-depth principles across its client and cloud architecture. We distinguish between currently active safeguards and planned v2.1 upgrades:</p>
+
+        <h3>A. Currently Active Safeguards (Shipped v1.0.0)</h3>
         <ul>
-          <li><strong>Cryptographic Proof of Ownership:</strong> Account deletion requires a 256-bit deletion token generated locally on-device. The backend validates the token using SHA-256 against an isolated database schema (<code>private.profile_security</code>) that is strictly inaccessible to public queries or anonymous PostgREST endpoints.</li>
-          <li><strong>Zero Service-Role Key Exposure:</strong> Privileged administrative database keys (service-role keys) are never bundled into the Android application or transmitted over the client network. Privileged operations execute solely within secure, isolated server-side Edge Functions.</li>
-          <li><strong>PostgreSQL Row-Level Security (RLS):</strong> All database tables enforce strict least-privilege RLS policies. A user can only select, insert, or update their own authentic records (<code>auth.uid() = id</code>). Permissive legacy access policies have been completely dropped.</li>
-          <li><strong>Anti-Cheat Server Validation:</strong> Habit completion points, carbon savings, and logging dates are checked by server-side triggers against canonical thresholds to prevent arbitrary score manipulation.</li>
-          <li><strong>Encryption in Transit:</strong> All communications between the Android application and Supabase APIs occur over HTTPS using TLS 1.3.</li>
+          <li><strong>Transport Layer Security:</strong> All client-to-cloud communications occur over encrypted HTTPS channels using standard Transport Layer Security (TLS 1.2 or TLS 1.3, subject to client device capability and server protocol negotiation).</li>
+          <li><strong>Android Application Sandboxing:</strong> Local SQLite database and DataStore preferences are isolated by the Android OS using Linux UID separation and device-level operating system encryption where supported.</li>
+          <li><strong>Zero Sensitive Key Bundling:</strong> Service-role / database administrator keys are not bundled in the client application.</li>
+        </ul>
+
+        <h3>B. Target v2.1 Release Architecture (Planned / Unverified in Hosted Infrastructure)</h3>
+        <p>The following security enhancements are designed and implemented in local v2.1 source code and migration scripts, but have <strong>NOT yet been deployed or verified in hosted staging or production infrastructure</strong>:</p>
+        <ul>
+          <li><strong>PostgreSQL Row-Level Security (RLS):</strong> The v2.1 database migration defines strict authentic tenancy policies where users can only select, insert, or update their own authentic records (<code>auth.uid() = id</code>), completely removing legacy permissive policies upon deployment.</li>
+          <li><strong>Anti-Cheat Server Validation:</strong> Habit completion points, carbon savings, and logging dates will be checked by server-side triggers against canonical thresholds to prevent arbitrary score manipulation.</li>
+          <li><strong>Cryptographic Proof of Ownership:</strong> Account deletion will require a 256-bit deletion token validated via SHA-256 against an isolated database schema (<code>private.profile_security</code>).</li>
+          <li><strong>Zero Service-Role Key Exposure:</strong> Privileged administrative operations execute solely within secure, isolated server-side Edge Functions.</li>
         </ul>
 
         <h3>Technical Limitations</h3>
@@ -619,25 +654,31 @@
 
       <!-- Section 9 -->
       <section id="section-9">
-        <h2><span class="section-num">9</span> Your Legal Rights (GDPR, CCPA &amp; Global)</h2>
-        <p>Depending on your jurisdiction (such as the European Union under GDPR or California under CCPA/CPRA), you have specific statutory privacy rights:</p>
+        <h2><span class="section-num">9</span> Your Legal Rights &amp; Limitations</h2>
+        <p>Depending on your jurisdiction (such as under the EU General Data Protection Regulation (GDPR) or California Consumer Privacy Act (CCPA/CPRA)), you may have specific statutory rights regarding personal data. Because EcoImpact processes data pseudonymously without collecting direct personal credentials (such as your legal name, email, or government ID), certain statutory rights apply to the extent that your account can be linked to your identity without disproportionate effort:</p>
         <ul>
-          <li><strong>Right of Access &amp; Portability:</strong> You can view all your logged habits, streaks, impact calculations, and profile details directly within the app at any time.</li>
-          <li><strong>Right to Rectification:</strong> You can edit your display name, city, country, and preferences directly on the Profile screen.</li>
-          <li><strong>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</strong> You have the right to request permanent deletion of all your personal data using the in-app deletion button or by emailing support.</li>
-          <li><strong>Right to Object &amp; Restrict Processing:</strong> You can opt out of leaderboard participation at any time by toggling the leaderboard setting off.</li>
-          <li><strong>Non-Discrimination:</strong> We do not discriminate against any user for exercising their privacy rights. All core habit tracking features remain fully functional regardless of your privacy choices.</li>
+          <li><strong>Right of Access:</strong> You can view all your logged habits, streaks, impact calculations, and profile details directly within the app at any time while the application is installed on your device.</li>
+          <li><strong>Data Export &amp; Portability Limitation:</strong> The EcoImpact application does <strong>not currently contain a built-in data export feature</strong> (such as an in-app button to export records in CSV, JSON, or other machine-readable formats). Furthermore, the project team does <strong>not currently have an established backend extraction tool or manual procedure</strong> to generate and deliver structured, machine-readable data exports upon request. While you may contact <a href="mailto:support.ecoimpact@gmail.com">support.ecoimpact@gmail.com</a> with general privacy questions, <strong>we cannot currently provide, promise, or guarantee the delivery of machine-readable data export files</strong>. Developing a verified data-export workflow or an in-app export feature remains planned future work.</li>
+          <li><strong>Right to Rectification:</strong> You can edit your display name, city, country, and preferences directly on the Profile screen at any time.</li>
+          <li><strong>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</strong> You have the right to request deletion of your data using the in-app deletion button or by emailing support (subject to identity verification limitations for anonymous accounts).</li>
+          <li><strong>Right to Object &amp; Restrict Processing:</strong> You can opt out of leaderboard participation at any time by toggling the leaderboard setting off in Settings.</li>
+          <li><strong>Non-Discrimination:</strong> We do not discriminate against any user for exercising privacy choices. Core offline habit tracking features remain fully functional regardless of your privacy settings.</li>
         </ul>
+
+        <div class="callout callout-warning">
+          <strong>Notice Regarding Legal Compliance &amp; Regulatory Review:</strong>
+          Depending on your jurisdiction (such as under the EU General Data Protection Regulation (GDPR) or California Consumer Privacy Act (CCPA/CPRA)), data subjects may possess statutory rights to receive personal data in a structured, commonly used, and machine-readable format. Disclosing current technical and operational limitations in this policy does not constitute statutory compliance or legal immunity. An independent legal and Google Play policy review remains required prior to commercial distribution.
+        </div>
       </section>
 
       <!-- Section 10 -->
       <section id="section-10">
         <h2><span class="section-num">10</span> Children's Privacy</h2>
         <p>
-          EcoImpact is intended for general audiences interested in tracking environmental sustainability habits. We do not knowingly collect or solicit personal information from children under 13 years of age (or under 16 where required by European Union law). 
+          EcoImpact is intended for general audiences interested in tracking daily environmental sustainability habits. We do not knowingly collect or solicit personal information from children under 13 years of age (or under 16 where required by European Union law).
         </p>
         <p>
-          Because we do not collect names, emails, phone numbers, or birthdates, we do not intentionally maintain identifiable profiles of children. If a parent or guardian discovers that a child has installed the application and wishes to have their activity data deleted, please contact us at <code>support.ecoimpact@gmail.com</code> and we will promptly remove any associated records.
+          Because we do not collect names, emails, phone numbers, or birthdates, we do not knowingly maintain identifiable profiles of children. If a parent or guardian discovers that a child has installed the application and wishes to have their activity data deleted, please contact us at <code>support.ecoimpact@gmail.com</code> with corroborating account details, and we will promptly assist in removing any associated cloud records.
         </p>
       </section>
 
