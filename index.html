@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — EcoImpact</title>
+  <meta name="description" content="Official Privacy Policy for EcoImpact Android application. Understand how we collect, use, store, retain, and delete your data.">
+  <link rel="canonical" href="https://veenitkrishna-cpu.github.io/ecoimpact-privacy/">
+  <meta property="og:title" content="Privacy Policy — EcoImpact">
+  <meta property="og:description" content="Official Privacy Policy for EcoImpact Android application. Learn about our offline-first privacy practices, data retention, and account deletion.">
+  <meta property="og:url" content="https://veenitkrishna-cpu.github.io/ecoimpact-privacy/">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --primary-light: #ecfdf5;
+      --accent: #10b981;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --danger-border: #fecaca;
+      --danger-bg: #fef2f2;
+      --danger-text: #991b1b;
+      --warning-border: #fef08a;
+      --warning-bg: #fefce8;
+      --warning-text: #854d0e;
+      --code-bg: #f1f5f9;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      line-height: 1.65;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
+      color: #ffffff;
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .header-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .policy-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 1rem;
+    }
+
+    .policy-meta {
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: -1.5rem auto 3rem;
+      padding: 0 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-item {
+      background: var(--bg-page);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid var(--primary);
+    }
+
+    .highlight-item h4 {
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .highlight-item p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: var(--primary-light);
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc h3 {
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc ol {
+      list-style-position: inside;
+      columns: 1;
+    }
+
+    @media (min-width: 640px) {
+      .toc ol {
+        columns: 2;
+      }
+    }
+
+    .toc li {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .toc a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content Typography */
+    h2 {
+      font-size: 1.5rem;
+      color: #111827;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+    }
+
+    h2 .section-num {
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.85rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #1f2937;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    strong {
+      color: #111827;
+    }
+
+    /* Callout Boxes */
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+      font-size: 0.925rem;
+    }
+
+    .callout-warning {
+      background-color: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      color: var(--warning-text);
+    }
+
+    .callout-danger {
+      background-color: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      color: var(--danger-text);
+    }
+
+    .callout-info {
+      background-color: var(--primary-light);
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Tables */
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    /* Step Boxes */
+    .step-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-header {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .step-number {
+      background: var(--primary);
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: #0f172a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .card {
+        padding: 1.5rem 1.25rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <span class="app-badge">EcoImpact Official Privacy Policy</span>
+      <h1>EcoImpact Privacy Policy</h1>
+      <p class="policy-subtitle">Transparent, offline-first personal carbon and habit tracking.</p>
+      <div class="policy-meta">
+        <strong>Effective Date:</strong> October 28, 2026 &bull; 
+        <strong>App Version:</strong> 2.1 &bull; 
+        <strong>Package:</strong> <code>com.ecoimpact.app</code>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+
+      <!-- Executive Privacy Summary -->
+      <section>
+        <p>
+          Welcome to <strong>EcoImpact</strong>. Your privacy and trust are paramount to us. EcoImpact is engineered as an 
+          <strong>offline-first sustainability companion</strong> designed to help you track daily eco-friendly habits and estimate your avoided carbon footprint. 
+          We believe personal environmental action should never require invasive personal surveillance.
+        </p>
+
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <h4>No Advertising or Trackers</h4>
+            <p>Zero third-party advertisement SDKs, trackers, or commercial profiling networks.</p>
+          </div>
+          <div class="highlight-item">
+            <h4>No Location Permissions</h4>
+            <p>GPS and network location permissions are never requested. City input is strictly optional user text.</p>
+          </div>
+          <div class="highlight-item">
+            <h4>Anonymous Authentication</h4>
+            <p>No email, password, phone number, or social login required to sync or participate.</p>
+          </div>
+          <div class="highlight-item">
+            <h4>Self-Service Data Deletion</h4>
+            <p>Permanent in-app deletion button wipes both local device data and remote cloud records.</p>
+          </div>
+        </div>
+
+        <div class="toc">
+          <h3>Table of Contents</h3>
+          <ol>
+            <li><a href="#section-1">Information We Collect</a></li>
+            <li><a href="#section-2">Information We Do Not Collect</a></li>
+            <li><a href="#section-3">How We Use Your Information</a></li>
+            <li><a href="#section-4">Data Storage &amp; Infrastructure</a></li>
+            <li><a href="#section-5">Community Leaderboard &amp; Privacy</a></li>
+            <li><a href="#section-6">Data Retention &amp; Inactivity Purge</a></li>
+            <li><a href="#section-7">Account &amp; Data Deletion</a></li>
+            <li><a href="#section-8">Security Safeguards &amp; Architecture</a></li>
+            <li><a href="#section-9">Your Legal Rights</a></li>
+            <li><a href="#section-10">Children's Privacy</a></li>
+            <li><a href="#section-11">Changes to This Policy</a></li>
+            <li><a href="#section-12">Contact &amp; Support</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Section 1 -->
+      <section id="section-1">
+        <h2><span class="section-num">1</span> Information We Collect</h2>
+        <p>EcoImpact minimizes data collection to only what is strictly necessary to calculate habit points, calculate cumulative CO₂ metrics, and facilitate optional community leaderboard rankings.</p>
+
+        <h3>A. Information You Provide Directly</h3>
+        <ul>
+          <li><strong>Display Name:</strong> A nickname or alias you choose for yourself in your profile (e.g., &ldquo;EcoAdventurer&rdquo;). This name is visible to others only if you opt in to leaderboard sharing.</li>
+          <li><strong>City &amp; Country:</strong> Manually entered text describing your general locality (defaulting to &ldquo;Local&rdquo;). <em>This is purely free-form text entered by you; we never access device GPS or location hardware.</em></li>
+          <li><strong>Habit Completions:</strong> Specific eco-friendly actions you log in the app (e.g., reusable water bottle, cold-water laundry, plant-based meal, public transit commute), along with the date and time of completion.</li>
+          <li><strong>Preferences:</strong> Your selected unit system (Metric: km/kg vs. Imperial: mi/lbs), theme mode (System/Light/Dark), notification reminder preferences, and leaderboard visibility toggle.</li>
+        </ul>
+
+        <h3>B. Automatically Generated Identifiers</h3>
+        <ul>
+          <li><strong>Device Identifier (UUID):</strong> A randomly generated Version-4 UUID created locally on your device when the app is first installed (stored in private app DataStore). It is not linked to your device hardware, IMEI, MAC address, or Android Advertising ID.</li>
+          <li><strong>Cryptographic Deletion Token:</strong> A 256-bit cryptographically secure random token (64-character hexadecimal string) generated locally on your device. The raw token remains on your device; only a one-way cryptographic SHA-256 hash of this token is transmitted to the server upon initial registration to verify and authorize future account deletion requests without requiring passwords.</li>
+          <li><strong>Anonymous Authentication Session:</strong> When online synchronization is active, an anonymous account session identifier is provisioned via Supabase Auth (<code>signInAnonymously()</code>). This provides cryptographic session tokens (JWT) to enforce database Row-Level Security (RLS) without requiring your name, email, or credentials.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="section-2">
+        <h2><span class="section-num">2</span> Information We Do Not Collect</h2>
+        <p>To ensure complete transparency, we explicitly confirm that EcoImpact <strong>does NOT</strong> access, collect, or store any of the following:</p>
+        <div class="data-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Precise / Coarse GPS Location</strong></td>
+                <td>Not Collected</td>
+                <td>Zero location permissions (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>) in app manifest. City is text-only.</td>
+              </tr>
+              <tr>
+                <td><strong>Hardware Identifiers</strong></td>
+                <td>Not Collected</td>
+                <td>No access to IMEI, MEID, Serial Number, MAC Address, or SIM card identifiers.</td>
+              </tr>
+              <tr>
+                <td><strong>Advertising ID (AAID)</strong></td>
+                <td>Not Collected</td>
+                <td>EcoImpact contains no advertising libraries and does not query Google Advertising IDs.</td>
+              </tr>
+              <tr>
+                <td><strong>Contacts &amp; Phonebook</strong></td>
+                <td>Not Collected</td>
+                <td>No access to your personal contacts, email address books, or call history.</td>
+              </tr>
+              <tr>
+                <td><strong>Camera &amp; Microphone</strong></td>
+                <td>Not Collected</td>
+                <td>No audio, photo, or video capture capabilities or permissions.</td>
+              </tr>
+              <tr>
+                <td><strong>Third-Party Analytics Trackers</strong></td>
+                <td>Not Collected</td>
+                <td>No Google Analytics, Firebase Analytics, Facebook SDK, or commercial telemetry SDKs.</td>
+              </tr>
+              <tr>
+                <td><strong>Financial &amp; Biometric Data</strong></td>
+                <td>Not Collected</td>
+                <td>No payment cards, banking info, fingerprint, or facial recognition access.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="section-3">
+        <h2><span class="section-num">3</span> How We Use Your Information</h2>
+        <p>We process your data strictly for the following purposes:</p>
+        <ul>
+          <li><strong>Impact Calculation &amp; Scoring:</strong> To calculate your estimated carbon emissions avoided (kg CO₂) and points earned based on published scientific emission factors.</li>
+          <li><strong>Offline-First Persistence:</strong> To keep your activity history, streaks, and unlocked milestone badges accessible on your device even without an internet connection.</li>
+          <li><strong>Cloud Synchronization (When Connected):</strong> To back up your habit logs and total score so your progress is preserved across app sessions.</li>
+          <li><strong>Community Leaderboard:</strong> If and only if opted in, to display your display name, city, and points on the community cohort leaderboard.</li>
+          <li><strong>Local Habit Reminders:</strong> If enabled, the app uses Android's local <code>AlarmManager</code> / notification scheduler to deliver periodic nudges to log your habits. These notifications are scheduled 100% locally on your device without push notification servers.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="section-4">
+        <h2><span class="section-num">4</span> Data Storage &amp; Infrastructure</h2>
+        
+        <h3>Local On-Device Storage</h3>
+        <p>
+          EcoImpact operates with an <strong>offline-first architecture</strong>. Your profile details, habit completion logs, points ledger, and unlocked badges are stored in an encrypted/sandboxed SQLite database on your device using Android Room (<code>EcoImpactDatabase</code>). Device credentials and deletion tokens are stored in Android Jetpack DataStore Preferences in private app-specific storage inaccessible to other installed applications.
+        </p>
+
+        <h3>Cloud Storage &amp; Service Providers</h3>
+        <p>When you have an active internet connection, EcoImpact connects to cloud infrastructure provided by:</p>
+        <ul>
+          <li>
+            <strong>Supabase Inc.</strong> — Provides our managed PostgreSQL database, authentication service, and serverless Edge Functions. Cloud infrastructure is hosted in enterprise-grade AWS data centers located in the European Union (Frankfurt, Germany) with end-to-end TLS 1.3 encryption in transit and AES-256 encryption at rest.
+          </li>
+        </ul>
+        <p>We do not use any other cloud providers, data brokers, or third-party storage vendors.</p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="section-5">
+        <h2><span class="section-num">5</span> Community Leaderboard &amp; Privacy</h2>
+        <p>EcoImpact includes an optional community leaderboard displaying user rankings, tiers, and points.</p>
+        <ul>
+          <li><strong>Opt-In by Default with Full Control:</strong> You can toggle leaderboard participation on or off at any time in the <strong>Profile &gt; Privacy Settings</strong> menu.</li>
+          <li><strong>Masked Identifiers:</strong> The leaderboard view (<code>public.leaderboard_view</code>) never exposes your underlying device UUID or internal account IDs. User identifiers are irreversibly hashed using SHA-256 before being displayed in leaderboard queries.</li>
+          <li><strong>Immediate Opt-Out Effect:</strong> If you toggle leaderboard sharing off, your profile is immediately filtered out of all community leaderboard queries.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="section-6">
+        <h2><span class="section-num">6</span> Data Retention &amp; 12-Month Inactivity Purge</h2>
+        
+        <p>We believe data should not be kept longer than necessary. Our retention policy is enforced both logically and through server-side automation:</p>
+
+        <h3>A. Active Accounts</h3>
+        <p>Your habit logs and score are retained as long as you actively use the application. Every time you open the app, sync habits, or update your profile, your activity timestamp (<code>last_synced_at</code>) is refreshed.</p>
+
+        <h3>B. Automated 12-Month Inactivity Purge</h3>
+        <div class="callout callout-info">
+          <strong>Verified Automated Retention Rule:</strong>
+          In accordance with database maintenance routine <code>public.purge_expired_profiles_12m()</code>, if an account has no synchronization or logging activity for <strong>12 consecutive months</strong> (and is outside any initial migration grace period), all associated cloud records—including user profile, habit logs, points ledgers, and authentication credentials—are <strong>automatically and permanently deleted</strong> from our cloud database.
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="section-7">
+        <h2><span class="section-num">7</span> Account &amp; Data Deletion Instructions</h2>
+        <p>You have full, unhindered control over your data. We provide both an instant self-service deletion mechanism directly inside the Android application and a manual email request path.</p>
+
+        <h3>Method 1: Direct In-App Deletion (Recommended)</h3>
+        <p>You can permanently delete all local and cloud data directly within the app at any time:</p>
+        
+        <div class="step-box">
+          <div class="step-header"><span class="step-number">1</span> Open the EcoImpact App</div>
+          <p>Launch EcoImpact on your Android device and navigate to the <strong>Profile</strong> tab (bottom navigation bar).</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-header"><span class="step-number">2</span> Tap &ldquo;Delete All My Data?&rdquo;</div>
+          <p>Scroll down to the bottom of the Profile screen to find the <strong>Data Management &amp; Privacy</strong> section.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-header"><span class="step-number">3</span> Confirm Deletion</div>
+          <p>A confirmation dialog will appear. Tap the red <strong>&ldquo;Delete My Data&rdquo;</strong> button to execute the deletion.</p>
+        </div>
+
+        <div class="callout callout-warning">
+          <strong>Important Disclosure Regarding Pending Deletion:</strong>
+          When you confirm deletion, the app dispatches an authenticated request to our secure <code>delete-account</code> Edge Function using your device's cryptographic deletion token. The server permanently purges your cloud profile, habit history, point ledgers, and authentication account.<br><br>
+          <strong>If the device is offline or the server cannot complete the request immediately</strong> (e.g. temporary network outage), the app safely records a durable pending tombstone on your device and keeps local records intact until the cloud deletion is confirmed. As soon as network connectivity is restored, the deletion retries automatically, wipes the local database, and clears the tombstone.
+        </div>
+
+        <h3>Method 2: Manual Deletion Request via Email</h3>
+        <p>
+          If you have uninstalled the application, lost your device, or are unable to use the in-app deletion button, you may submit a manual deletion request by contacting our official support email:
+        </p>
+        <p style="text-align: center; margin: 1.5rem 0;">
+          <a href="mailto:support.ecoimpact@gmail.com?subject=EcoImpact%20Data%20Deletion%20Request" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+            Email support.ecoimpact@gmail.com
+          </a>
+        </p>
+        <p>
+          <em>Note:</em> Because EcoImpact uses anonymous device identifiers without collecting your personal email address or passwords, please mention any known details (such as your display name or approximate date of registration) when writing to us so we can locate and remove any lingering cloud records.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="section-8">
+        <h2><span class="section-num">8</span> Security Safeguards &amp; Architecture</h2>
+        <p>EcoImpact incorporates defense-in-depth security principles across the client and cloud architecture:</p>
+        <ul>
+          <li><strong>Cryptographic Proof of Ownership:</strong> Account deletion requires a 256-bit deletion token generated locally on-device. The backend validates the token using SHA-256 against an isolated database schema (<code>private.profile_security</code>) that is strictly inaccessible to public queries or anonymous PostgREST endpoints.</li>
+          <li><strong>Zero Service-Role Key Exposure:</strong> Privileged administrative database keys (service-role keys) are never bundled into the Android application or transmitted over the client network. Privileged operations execute solely within secure, isolated server-side Edge Functions.</li>
+          <li><strong>PostgreSQL Row-Level Security (RLS):</strong> All database tables enforce strict least-privilege RLS policies. A user can only select, insert, or update their own authentic records (<code>auth.uid() = id</code>). Permissive legacy access policies have been completely dropped.</li>
+          <li><strong>Anti-Cheat Server Validation:</strong> Habit completion points, carbon savings, and logging dates are checked by server-side triggers against canonical thresholds to prevent arbitrary score manipulation.</li>
+          <li><strong>Encryption in Transit:</strong> All communications between the Android application and Supabase APIs occur over HTTPS using TLS 1.3.</li>
+        </ul>
+
+        <h3>Technical Limitations</h3>
+        <p>
+          Because EcoImpact relies on anonymous authentication stored in local device preferences, if you uninstall the app or clear app data while offline without internet access, your local device session is erased and cannot be recovered.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="section-9">
+        <h2><span class="section-num">9</span> Your Legal Rights (GDPR, CCPA &amp; Global)</h2>
+        <p>Depending on your jurisdiction (such as the European Union under GDPR or California under CCPA/CPRA), you have specific statutory privacy rights:</p>
+        <ul>
+          <li><strong>Right of Access &amp; Portability:</strong> You can view all your logged habits, streaks, impact calculations, and profile details directly within the app at any time.</li>
+          <li><strong>Right to Rectification:</strong> You can edit your display name, city, country, and preferences directly on the Profile screen.</li>
+          <li><strong>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</strong> You have the right to request permanent deletion of all your personal data using the in-app deletion button or by emailing support.</li>
+          <li><strong>Right to Object &amp; Restrict Processing:</strong> You can opt out of leaderboard participation at any time by toggling the leaderboard setting off.</li>
+          <li><strong>Non-Discrimination:</strong> We do not discriminate against any user for exercising their privacy rights. All core habit tracking features remain fully functional regardless of your privacy choices.</li>
+        </ul>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="section-10">
+        <h2><span class="section-num">10</span> Children's Privacy</h2>
+        <p>
+          EcoImpact is intended for general audiences interested in tracking environmental sustainability habits. We do not knowingly collect or solicit personal information from children under 13 years of age (or under 16 where required by European Union law). 
+        </p>
+        <p>
+          Because we do not collect names, emails, phone numbers, or birthdates, we do not intentionally maintain identifiable profiles of children. If a parent or guardian discovers that a child has installed the application and wishes to have their activity data deleted, please contact us at <code>support.ecoimpact@gmail.com</code> and we will promptly remove any associated records.
+        </p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="section-11">
+        <h2><span class="section-num">11</span> Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in our application features, underlying database architecture, or legal requirements.
+        </p>
+        <p>
+          When updates occur, we will revise the &ldquo;Effective Date&rdquo; at the top of this document. Any material changes will be communicated via in-app release notes or notices on this website. We encourage you to review this page periodically to stay informed about our data protection practices.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="section-12">
+        <h2><span class="section-num">12</span> Contact &amp; Support</h2>
+        <p>
+          If you have questions, feedback, or concerns regarding this Privacy Policy or wish to exercise your data rights, please contact our official project support team:
+        </p>
+        <div style="background: var(--bg-page); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.25rem 1.5rem; margin-top: 1rem;">
+          <p style="margin-bottom: 0.5rem;"><strong>EcoImpact Support Team</strong></p>
+          <p style="margin-bottom: 0.5rem;"><strong>Official Support Email:</strong> <a href="mailto:support.ecoimpact@gmail.com" style="color: var(--primary); font-weight: 600;">support.ecoimpact@gmail.com</a></p>
+          <p style="margin-bottom: 0.5rem;"><strong>Official Privacy Repository:</strong> <a href="https://github.com/veenitkrishna-cpu/ecoimpact-privacy" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">github.com/veenitkrishna-cpu/ecoimpact-privacy</a></p>
+          <p style="margin-bottom: 0;"><strong>Published Policy URL:</strong> <a href="https://veenitkrishna-cpu.github.io/ecoimpact-privacy/" style="color: var(--primary);">https://veenitkrishna-cpu.github.io/ecoimpact-privacy/</a></p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EcoImpact. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://veenitkrishna-cpu.github.io/ecoimpact-privacy/">Privacy Policy</a> &bull; 
+      <a href="mailto:support.ecoimpact@gmail.com">Support: support.ecoimpact@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
